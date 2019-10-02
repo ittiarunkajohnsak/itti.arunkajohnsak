@@ -9,16 +9,19 @@
 ``` Run main class : Application.java ```
 
 ### Usage
-1. Get Jwt Token  
-   > POST : http://localhost:8080/authenticate  
+- Get Jwt Token
+```  
+   POST : http://localhost:8080/authenticate  
         header : Content-Type : application/json  
         body : {  
                  "username": "itti.test",  
                  "password": "password"  
                }
+```
 
-2. Register user  
-   > POST : http://localhost:8080/user  
+- Register user  
+```
+   POST : http://localhost:8080/user  
         header : Content-Type : application/json  
                : Authorization: Bearer <jwt_token>  
         body   : {  
@@ -31,7 +34,10 @@
                    "phone": "",  
                    "salary": ""  
                  }
+```
 
-3. Get all users
-   > GET : http://localhost:8080/users  
-       header : Authorization: Bearer <jwt_token>  
+- Get all users
+```
+   GET : http://localhost:8080/users  
+       header : Authorization: Bearer <jwt_token>
+```  
