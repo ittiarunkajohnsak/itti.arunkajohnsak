@@ -1,0 +1,19 @@
+server:
+  contextPath: /
+  port: 8080
+
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+      poolName: ittiPool
+    url: jdbc:h2:file:./target/ittiDB;DB_CLOSE_ON_EXIT=FALSE
+
+logging:
+  level:
+    com:
+      zaxxer: DEBUG
+
+jwt:
+  secret: ittisecret
